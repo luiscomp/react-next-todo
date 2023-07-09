@@ -1,0 +1,26 @@
+.cp-group-select {
+    @apply flex flex-col gap-1;
+
+    > .title {
+        @apply font-normal text-xs;
+    }
+
+    .group-select {
+        @apply flex gap-3 mt-2;
+
+        > .cp-group-select-item {
+            @apply flex-1;
+            @apply py-1 px-2 rounded-md cursor-pointer;
+            @apply bg-transparent ring-[1px] ring-white hover:ring-2;
+            @apply text-xs text-white hover:text-white font-medium;
+            @apply transition-colors duration-200 ease-in-out;;
+
+            &[custom-current="true"] {
+                @apply text-[var(--primary-color)] hover:text-[var(--primary-color)];
+                @apply font-semibold;
+                @apply bg-white;
+                @apply shadow-[0_0px_6px_rgba(255,255,255,0.8)];
+            }
+        }
+    }
+}

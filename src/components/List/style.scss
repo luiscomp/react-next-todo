@@ -1,0 +1,7 @@
+.cp-list {
+    @apply flex flex-col gap-2;
+
+    > .cp-list-item {
+        @apply flex gap-1;
+    }
+}

@@ -1,0 +1,38 @@
+.cp-input-text {
+    @apply relative flex items-center justify-center;
+
+    > label {
+        @apply absolute left-0 top-0;
+        @apply text-white;
+        @apply text-sm;
+        @apply pointer-events-none;
+        @apply transition-all duration-300 ease-in-out;
+    }
+
+    > input {
+        @apply w-full;
+        @apply bg-transparent;
+        @apply border-b-[1px] border-white;
+        @apply outline-none;
+        @apply transition-all duration-100 ease-in-out;
+
+        &:not([value=""]) + label {
+            @apply text-xs;
+            @apply -top-3;
+        }
+
+        &:not([value]) + label {
+            @apply text-sm;
+            @apply top-0;
+        }
+
+        &:focus + label {
+            @apply text-xs;
+            @apply -top-3;
+        }
+
+        &:focus {
+            @apply border-b-2;
+        }
+    }
+}

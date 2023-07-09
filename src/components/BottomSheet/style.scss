@@ -1,0 +1,55 @@
+.cp-bottom-sheet {
+    @apply absolute inset-0 z-40 flex items-center justify-center rounded-3xl;
+    @apply overflow-hidden;
+    @apply text-white;
+    @apply pointer-events-none;
+
+    &__overlay {
+        @apply absolute inset-0 opacity-0 rounded-3xl z-40;
+        @apply pointer-events-none;
+        @apply transition-opacity duration-300 ease-in-out;
+
+        &.-open {
+            @apply bg-black opacity-10;
+            @apply pointer-events-auto;
+            @apply cursor-pointer;
+        }
+    }
+
+    &__content {
+        @apply absolute bottom-0 w-full min-h-[200px] z-50;
+        @apply bg-[var(--primary-color)] rounded-t-3xl;
+        @apply p-6;
+        @apply translate-y-full;
+        @apply transition-transform duration-300 ease-in-out;
+        @apply pointer-events-none;
+
+        &.-open {
+            @apply translate-y-0;
+            @apply pointer-events-auto;
+            @apply cursor-default;
+        }
+
+        > header {
+            @apply flex items-center justify-between;
+            @apply mb-4;
+            @apply pointer-events-auto;
+            @apply cursor-default;
+
+            > .title {
+                @apply text-lg;
+            }
+
+            > .close {
+                @apply text-xl font-bold;
+                @apply cursor-pointer;
+                @apply flex items-center justify-center;
+
+                > svg {
+                    @apply w-6 h-6;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --primary-color: #8A2BE2;
+  --primary-color-hover: #7716d2;
+  --primary-color-shadow: #892be2b8;
+  --secondary-color: #ffffff;
+  --secondary-color-hover: #d3d3d3;
+  --secondary-color-shadow: #d3d3d3;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+    --primary-color: #8A2BE2;
+    --primary-color-hover: #7716d2;
+    --primary-color-shadow: #892be2b8;
+    --secondary-color: #ffffff;
+    --secondary-color-hover: #d3d3d3;
+    --secondary-color-shadow: #d3d3d3;
+  }
+}
+
+@layer base {
+  html {
+    font-family: Montserrat, system-ui, sans-serif;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+*, *::before, *::after {
+  @apply font-sans;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.page {
+  @apply flex justify-center items-center h-screen;
+  @apply bg-gradient-to-r from-blue-500 to-purple-500;
+  @apply text-white;
+}
