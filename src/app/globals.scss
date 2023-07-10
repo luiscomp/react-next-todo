@@ -50,9 +50,3 @@ body {
   @apply font-sans;
   -webkit-tap-highlight-color: transparent;
 }
-
-.page {
-  @apply flex justify-center items-center h-screen;
-  @apply bg-gradient-to-r from-blue-500 to-purple-500;
-  @apply text-white;
-}

@@ -1,0 +1,5 @@
+.cp-page {
+    @apply flex justify-center items-center h-screen gap-4;
+    @apply bg-gradient-to-r from-blue-500 to-purple-500;
+    @apply text-white;
+}
